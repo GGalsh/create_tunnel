@@ -1,0 +1,897 @@
+{
+  "Uuid": "ab202706-72b8-450b-812a-74f9a337b30c",
+  "IsCustomNode": false,
+  "Description": null,
+  "Name": "Example",
+  "ElementResolver": {
+    "ResolutionMap": {
+      "Point": {
+        "Key": "Autodesk.DesignScript.Geometry.Point",
+        "Value": "ProtoGeometry.dll"
+      }
+    }
+  },
+  "Inputs": [],
+  "Outputs": [],
+  "Nodes": [
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Circle.ByCenterPointRadius@Autodesk.DesignScript.Geometry.Point,double",
+      "Id": "656b56d7000a442faf69c6430150d4ae",
+      "Inputs": [
+        {
+          "Id": "77776341d517443e9ee82795b6492999",
+          "Name": "centerPoint",
+          "Description": "Point\n默认值 : Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 0, 0)",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c93fff1781294241af5909dda9d72382",
+          "Name": "radius",
+          "Description": "double\n默认值 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "2ec116b3791f4723a76f48efed45da98",
+          "Name": "Circle",
+          "Description": "Circle",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "以世界坐标系 Z 轴为法线通过在世界坐标系 XY 平面输入圆心和半径创建圆。\n\nCircle.ByCenterPointRadius (centerPoint: Point = Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 0, 0), radius: double = 1): Circle"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Point.ByCoordinates@double,double,double",
+      "Id": "ad9ae0f1d8e6411f8dd8c87c21c232cc",
+      "Inputs": [
+        {
+          "Id": "6904a1c5127b4c469a14c99f553b7a6e",
+          "Name": "x",
+          "Description": "double\n默认值 : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8ce6bd8cb91b46f29baa80a9f8259d79",
+          "Name": "y",
+          "Description": "double\n默认值 : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f412f87ad7d0452cb1f250bee01626df",
+          "Name": "z",
+          "Description": "double\n默认值 : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "56bd1e01d38d4e2a8f6cca974c52c46a",
+          "Name": "Point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "通过给定的 3 个笛卡尔坐标形成一个点\n\nPoint.ByCoordinates (x: double = 0, y: double = 0, z: double = 0): Point"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 100.0,
+      "MinimumValue": 0.0,
+      "StepValue": 0.1,
+      "InputValue": 10.0,
+      "Id": "7d5609a7095b47eeaa0634a155506c2d",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "309c2d17693f4fbfab94dd8b59d8a402",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "用于生成数字值的滑块。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 100.0,
+      "MinimumValue": 0.0,
+      "StepValue": 0.1,
+      "InputValue": 20.0,
+      "Id": "c30ce952d04743bf950d637fcde9a281",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "7b5815f475904bf7b53e8fa92031d6db",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "用于生成数字值的滑块。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleInput, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "InputValue": 50.0,
+      "Id": "a26a305812b043f0a64c95c70a3d68b0",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "c459951c2c0245a3aaefae1c1abe5d14",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "创建数字。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleInput, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "InputValue": 0.0,
+      "Id": "db1faa6a2d094b46be5883310d478628",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b93a8c301d5440228bc7678cd09b2c2a",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "创建数字。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Geometry.DistanceTo@Autodesk.DesignScript.Geometry.Geometry",
+      "Id": "1e8c7910ee3a4da5873737f4d684b9cc",
+      "Inputs": [
+        {
+          "Id": "170021a8b030449a8fc72333d52d8d3e",
+          "Name": "geometry",
+          "Description": "Autodesk.DesignScript.Geometry.Geometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "8201f2482aa548c99119c02221f490c4",
+          "Name": "other",
+          "Description": "其他几何图形\n\nGeometry",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "27e37914ae81407582bde6e453de259b",
+          "Name": "double",
+          "Description": "距离",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "获取从该几何图形到另一几何图形的距离\n\nGeometry.DistanceTo (other: Geometry): double"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "x/y;",
+      "Id": "3c297d119fbd4089abb675f2944a8da0",
+      "Inputs": [
+        {
+          "Id": "9924a8dd0bc542d2960125c1ff679dde",
+          "Name": "x",
+          "Description": "x",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "565934a7cd6e465ba1b49d50ca702e29",
+          "Name": "y",
+          "Description": "y",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "7c8348dc14ab45ee9f2e9eda7aa857af",
+          "Name": "",
+          "Description": "行 1 中的表达式值",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "允许直接编写 DesignScript 代码"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleSlider, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "MaximumValue": 5.0,
+      "MinimumValue": 0.0,
+      "StepValue": 0.5,
+      "InputValue": 2.0,
+      "Id": "e62948573176439a94b2197c449ef522",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "1f6f0dd39b8b4364a2016c6798db011c",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "用于生成数字值的滑块。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Sphere.ByCenterPointRadius@Autodesk.DesignScript.Geometry.Point,double",
+      "Id": "2008b85f1eb445a29c40be3db439d7f0",
+      "Inputs": [
+        {
+          "Id": "104aae28d90e4b3bb4f56cdca262648b",
+          "Name": "centerPoint",
+          "Description": "Point\n默认值 : Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 0, 0)",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "dce51b427fc54ff4a6c6fa0b2efc3fdf",
+          "Name": "radius",
+          "Description": "double\n默认值 : 1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "ba4077e11f8e49d59807b00bcb31e0e1",
+          "Name": "Sphere",
+          "Description": "Sphere",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "以输入点为球心按给定半径创建实心球体。\n\nSphere.ByCenterPointRadius (centerPoint: Point = Autodesk.DesignScript.Geometry.Point.ByCoordinates(0, 0, 0), radius: double = 1): Sphere"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.ZeroTouch.DSFunction, DynamoCore",
+      "NodeType": "FunctionNode",
+      "FunctionSignature": "Autodesk.DesignScript.Geometry.Point.ByCoordinates@double,double,double",
+      "Id": "18eefe62c3af40ac96fede513001ebbc",
+      "Inputs": [
+        {
+          "Id": "2fa3da0011ba4202bb0edb68cee0ad29",
+          "Name": "x",
+          "Description": "double\n默认值 : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "ad2f17bc36334020af57697714f8cc4d",
+          "Name": "y",
+          "Description": "double\n默认值 : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "41b1858217eb480d86c90294ee16332d",
+          "Name": "z",
+          "Description": "double\n默认值 : 0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "6389b0a9e9bc4510a2a326fa02ab7bb5",
+          "Name": "Point",
+          "Description": "Point",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "通过给定的 3 个笛卡尔坐标形成一个点\n\nPoint.ByCoordinates (x: double = 0, y: double = 0, z: double = 0): Point"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Range, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "4a5d558299dd451f8cd8d0558209c002",
+      "Inputs": [
+        {
+          "Id": "683a2f66ea754211b2df4353b68ba90b",
+          "Name": "start",
+          "Description": "序列开始的数字或字母\r\n默认值：0",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "c09db96937224aedb40f18675d387996",
+          "Name": "end",
+          "Description": "序列结束的数字或字母\r\n默认值：9",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "fc634615de644ad0bf5ad6cd8b8ceab8",
+          "Name": "step",
+          "Description": "数字或字母之间的空间\r\n默认值：1",
+          "UsingDefaultValue": true,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "03ca676c2fd043e49a9965afc6ad610b",
+          "Name": "seq",
+          "Description": "新建序列",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "按指定范围创建一系列数字或字母。"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Input.DoubleInput, CoreNodeModels",
+      "NodeType": "NumberInputNode",
+      "NumberType": "Double",
+      "InputValue": 5.0,
+      "Id": "d705a55b783a449a9161e7c5d453fd0e",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "b1d76519ef9d43b4bcfda7959cd1f136",
+          "Name": "",
+          "Description": "Double",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Auto",
+      "Description": "创建数字。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "1;",
+      "Id": "82bd523e549f4e38ab89ca5e27a006bc",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "2e970dd0f6274d67a8ae9bb957ab19fb",
+          "Name": "",
+          "Description": "行 1 中的表达式值",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "允许直接编写 DesignScript 代码"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "1;",
+      "Id": "784ca2235f4e426aab97b596a64559e9",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "0c3d32b1524e4e2981af0908e19acff5",
+          "Name": "",
+          "Description": "行 1 中的表达式值",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "允许直接编写 DesignScript 代码"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "d=Point.ByCoordinates(a,b,c);",
+      "Id": "894b7b94be3649ce9bb8b00ba8063822",
+      "Inputs": [
+        {
+          "Id": "eeebf5ae0e104281afebe29ab020f434",
+          "Name": "a",
+          "Description": "a",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f98ad796da7b466ea0366d3ebc8b2226",
+          "Name": "b",
+          "Description": "b",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        },
+        {
+          "Id": "f3a83d539547463ab22ff2a84cd01088",
+          "Name": "c",
+          "Description": "c",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "fc5a9bf935b24daca18e1994d21fb18c",
+          "Name": "",
+          "Description": "d",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "允许直接编写 DesignScript 代码"
+    },
+    {
+      "ConcreteType": "CoreNodeModels.Watch, CoreNodeModels",
+      "NodeType": "ExtensionNode",
+      "Id": "742791a7b1a84ba883f49129ed4e4c38",
+      "Inputs": [
+        {
+          "Id": "0e5ad0be9e3a4f5dbc1e6e341ed2ab0e",
+          "Name": "",
+          "Description": "要计算的节点。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Outputs": [
+        {
+          "Id": "cd15a532a8dd448287a19df210be632a",
+          "Name": "",
+          "Description": "查看内容。",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "将节点输出内容可视化。"
+    },
+    {
+      "ConcreteType": "Dynamo.Graph.Nodes.CodeBlockNodeModel, DynamoCore",
+      "NodeType": "CodeBlockNode",
+      "Code": "0;",
+      "Id": "8444f10d164849b989626d9b6b34cb3e",
+      "Inputs": [],
+      "Outputs": [
+        {
+          "Id": "40799ace77bb4c45b62895576ad68b7f",
+          "Name": "",
+          "Description": "行 1 中的表达式值",
+          "UsingDefaultValue": false,
+          "Level": 2,
+          "UseLevels": false,
+          "KeepListStructure": false
+        }
+      ],
+      "Replication": "Disabled",
+      "Description": "允许直接编写 DesignScript 代码"
+    }
+  ],
+  "Connectors": [
+    {
+      "Start": "56bd1e01d38d4e2a8f6cca974c52c46a",
+      "End": "8201f2482aa548c99119c02221f490c4",
+      "Id": "f4c7f8e718374af0a893cefa9e86bec4"
+    },
+    {
+      "Start": "309c2d17693f4fbfab94dd8b59d8a402",
+      "End": "8ce6bd8cb91b46f29baa80a9f8259d79",
+      "Id": "cab16516345047bba3f266b62dc378a3"
+    },
+    {
+      "Start": "7b5815f475904bf7b53e8fa92031d6db",
+      "End": "6904a1c5127b4c469a14c99f553b7a6e",
+      "Id": "84ecabfdb5144339ac57bffa147f0392"
+    },
+    {
+      "Start": "c459951c2c0245a3aaefae1c1abe5d14",
+      "End": "c09db96937224aedb40f18675d387996",
+      "Id": "d6a5b67cab174422a3202ebce02251b3"
+    },
+    {
+      "Start": "b93a8c301d5440228bc7678cd09b2c2a",
+      "End": "683a2f66ea754211b2df4353b68ba90b",
+      "Id": "610a68010b0f463095d95b291b96a0ea"
+    },
+    {
+      "Start": "27e37914ae81407582bde6e453de259b",
+      "End": "9924a8dd0bc542d2960125c1ff679dde",
+      "Id": "cc0d70678be7460dbde96743cc7e9864"
+    },
+    {
+      "Start": "7c8348dc14ab45ee9f2e9eda7aa857af",
+      "End": "dce51b427fc54ff4a6c6fa0b2efc3fdf",
+      "Id": "358e9ead36c9488ea77c0b8bc19b931f"
+    },
+    {
+      "Start": "7c8348dc14ab45ee9f2e9eda7aa857af",
+      "End": "c93fff1781294241af5909dda9d72382",
+      "Id": "fd7c40ca5f3146d499c9809d5fb747cc"
+    },
+    {
+      "Start": "1f6f0dd39b8b4364a2016c6798db011c",
+      "End": "565934a7cd6e465ba1b49d50ca702e29",
+      "Id": "477f5053e1d94c8c86bbe8adbfe36756"
+    },
+    {
+      "Start": "6389b0a9e9bc4510a2a326fa02ab7bb5",
+      "End": "104aae28d90e4b3bb4f56cdca262648b",
+      "Id": "674c7ea10ca242fc9fb415f9eec6b4f5"
+    },
+    {
+      "Start": "6389b0a9e9bc4510a2a326fa02ab7bb5",
+      "End": "77776341d517443e9ee82795b6492999",
+      "Id": "351d389382604910b721dfb4ec647d3a"
+    },
+    {
+      "Start": "6389b0a9e9bc4510a2a326fa02ab7bb5",
+      "End": "170021a8b030449a8fc72333d52d8d3e",
+      "Id": "5637cb746aa347feb91fb83b962702df"
+    },
+    {
+      "Start": "03ca676c2fd043e49a9965afc6ad610b",
+      "End": "2fa3da0011ba4202bb0edb68cee0ad29",
+      "Id": "e48ce1e0e2f04e38a7dc750a96f103c4"
+    },
+    {
+      "Start": "03ca676c2fd043e49a9965afc6ad610b",
+      "End": "ad2f17bc36334020af57697714f8cc4d",
+      "Id": "d54faaf902434084aaf6d5d28cdffe75"
+    },
+    {
+      "Start": "b1d76519ef9d43b4bcfda7959cd1f136",
+      "End": "fc634615de644ad0bf5ad6cd8b8ceab8",
+      "Id": "a477639146ed47b8863d7ac75fdded3f"
+    },
+    {
+      "Start": "2e970dd0f6274d67a8ae9bb957ab19fb",
+      "End": "eeebf5ae0e104281afebe29ab020f434",
+      "Id": "5fc4ab2bc6aa442e9a9bf1a2f7fca6a0"
+    },
+    {
+      "Start": "0c3d32b1524e4e2981af0908e19acff5",
+      "End": "f98ad796da7b466ea0366d3ebc8b2226",
+      "Id": "8829fa5431ab4264b899c22de26457c3"
+    },
+    {
+      "Start": "fc5a9bf935b24daca18e1994d21fb18c",
+      "End": "0e5ad0be9e3a4f5dbc1e6e341ed2ab0e",
+      "Id": "78eda37470ff49628701ada1e46a753d"
+    },
+    {
+      "Start": "40799ace77bb4c45b62895576ad68b7f",
+      "End": "f3a83d539547463ab22ff2a84cd01088",
+      "Id": "c01000172714431b8843b4d8a4846677"
+    }
+  ],
+  "Dependencies": [],
+  "NodeLibraryDependencies": [],
+  "Bindings": [],
+  "View": {
+    "Dynamo": {
+      "ScaleFactor": 1.0,
+      "HasRunWithoutCrash": true,
+      "IsVisibleInDynamoLibrary": true,
+      "Version": "2.5.0.7460",
+      "RunType": "Manual",
+      "RunPeriod": "1000"
+    },
+    "Camera": {
+      "Name": "背景预览",
+      "EyeX": -383.64123476769987,
+      "EyeY": 216.72177347887828,
+      "EyeZ": 590.28425299641935,
+      "LookX": -125.35888539430115,
+      "LookY": -263.79530717599533,
+      "LookZ": -439.76608380413177,
+      "UpX": -0.08289097377215672,
+      "UpY": 0.95319066779293993,
+      "UpZ": -0.2907862398731062
+    },
+    "NodeViews": [
+      {
+        "ShowGeometry": true,
+        "Name": "Circle.ByCenterPointRadius",
+        "Id": "656b56d7000a442faf69c6430150d4ae",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1012.06895578401,
+        "Y": 179.288542975223
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Point.ByCoordinates",
+        "Id": "ad9ae0f1d8e6411f8dd8c87c21c232cc",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 225.71996191737671,
+        "Y": 390.23856662014595
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Number Slider",
+        "Id": "7d5609a7095b47eeaa0634a155506c2d",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -227.166666960826,
+        "Y": 472.765964506649
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Number Slider",
+        "Id": "c30ce952d04743bf950d637fcde9a281",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -227.166666960826,
+        "Y": 371.764503334216
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Number",
+        "Id": "a26a305812b043f0a64c95c70a3d68b0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -423.5669803952224,
+        "Y": 234.1754878953314
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Number",
+        "Id": "db1faa6a2d094b46be5883310d478628",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -418.95935778323684,
+        "Y": 161.63977591882497
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Geometry.DistanceTo",
+        "Id": "1e8c7910ee3a4da5873737f4d684b9cc",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 508.05816877372763,
+        "Y": 263.966320780645
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "3c297d119fbd4089abb675f2944a8da0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 799.21596434313733,
+        "Y": 317.42159108642028
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Number Slider",
+        "Id": "e62948573176439a94b2197c449ef522",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 459.06289124963018,
+        "Y": 397.7187353047878
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Sphere.ByCenterPointRadius",
+        "Id": "2008b85f1eb445a29c40be3db439d7f0",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 1002.46895578401,
+        "Y": 360.663459686918
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Point.ByCoordinates",
+        "Id": "18eefe62c3af40ac96fede513001ebbc",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": 235.995461211084,
+        "Y": 170.795461211084
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Range",
+        "Id": "4a5d558299dd451f8cd8d0558209c002",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -67.978659328505387,
+        "Y": 185.38408099643405
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Number",
+        "Id": "d705a55b783a449a9161e7c5d453fd0e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -422.64545587282527,
+        "Y": 306.319125935173
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "82bd523e549f4e38ab89ca5e27a006bc",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1311.3315250514777,
+        "Y": 590.39671026569363
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "784ca2235f4e426aab97b596a64559e9",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1305.7773627215206,
+        "Y": 708.20879663472363
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "894b7b94be3649ce9bb8b00ba8063822",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1168.2648714086138,
+        "Y": 694.51385851576856
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Watch",
+        "Id": "742791a7b1a84ba883f49129ed4e4c38",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -838.71845891355258,
+        "Y": 690.62760882356019
+      },
+      {
+        "ShowGeometry": true,
+        "Name": "Code Block",
+        "Id": "8444f10d164849b989626d9b6b34cb3e",
+        "IsSetAsInput": false,
+        "IsSetAsOutput": false,
+        "Excluded": false,
+        "X": -1305.3328225894877,
+        "Y": 835.22806112788771
+      }
+    ],
+    "Annotations": [],
+    "X": 1788.1222485233063,
+    "Y": -509.73262349069546,
+    "Zoom": 1.2253572072408658
+  }
+}
